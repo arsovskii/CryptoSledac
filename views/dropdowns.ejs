@@ -1,0 +1,48 @@
+<div class="dropdown is-up" id="dropDownSelector">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+        <img id = "dropdownImageSelected" class = "cryptoSmallImage" src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579" alt=""> <span id = "selectedCrypto"> Bitcoin</span>
+        
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+      <div class="dropdown-content">
+        
+        <% for (let index = 0; index < data.length; index++){ %>
+            <a href="#" class="dropdown-item" id="<%=index%>" ><%=data[index][0]%></a>
+        <% } %> 
+    
+        
+      </div>
+      
+    </div>
+    
+    <div id = "currentSelectedPrice">
+      
+    </div>
+    
+  </div>
+  <div class="dropdown is-up" id="timeSelect">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+       <span id = "timeFrameSelect"> 1 Ден</span>
+        
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <a href="#" class="dropdown-item" id="1den" >1 Ден</a>
+        <a href="#" class="dropdown-item" id="7den" >7 Дена</a>
+        <a href="#" class="dropdown-item" id="1mesec" >1 Месец</a>
+        <a href="#" class="dropdown-item" id="6mesec" >6 Месеци</a>
+        <a href="#" class="dropdown-item" id="1godina" >1 Година</a>
+        <a href="#" class="dropdown-item" id="maxtime" >Максимум</a>
+        
+      </div>
+    
+    
+    
+  </div>
+</div>
+  
+  

@@ -1,0 +1,177 @@
+html{
+    background-color: #313131;
+}
+#chartCard{
+    width:70% !important;
+    margin:0 auto;
+    transition: 0.5s all;
+}
+
+.card{
+    margin:50px;
+}
+canvas{
+    border-radius: 10px;
+}
+.percent{
+    float:right;
+    
+    
+}
+
+.dropdown-content{
+    padding: 0;
+}
+.dropdown-menu{
+    padding:0 !important;
+}
+.positiveMarket{
+    background-color: rgba(144, 221, 144, 0.924);
+}
+.negativeMarket{
+    background-color:rgb(236, 188, 188) ;
+}
+.positivePercent{
+    color:green !important ;
+}
+.negativePercent{
+    color:red !important ;
+}
+.symbol{
+    float:right;
+    padding:0px 15px;
+}
+.positiveLine{
+    background-color:rgba(0, 128, 0, 0.424) ;
+    transition: 0.15s all ;
+}
+.negativeLine{
+    background-color:rgba(255, 0, 0, 0.37);
+    transition: 0.15s all ;
+}
+#dropDownSelector .dropdown-item{
+    padding-right: 10px !important;
+    padding-left: 5px !important;
+    min-width: 16rem !important;
+}
+.smallText{
+    font-size: 0.5em ; 
+}
+.card-content{
+    
+    padding:10px !important;
+}
+.cryptoSmallImage{
+    float:left;
+    width:21px;
+    height:21px;
+    margin-right: 10px;
+}
+button{
+    margin: 0 0 15px 15px;
+}
+#currentSelectedPrice{
+   
+    font-size: 22px;
+    background-color: white;
+    margin-left: 20px; 
+    padding:4px;
+    border-radius: 5px;
+    margin-bottom:10px;
+}
+#timeSelect{
+    float:right;
+    margin-right:15px;
+}
+table{
+    margin: 0 auto;
+}
+.notification{
+    width:80%;
+    margin: 5px auto;
+    padding:10px;
+}
+#coinName{
+    margin:0px 40px 40px 40px;
+}
+#coinDesc{
+    font-size: 1.1rem;
+}
+#basicCoinInfo{
+    width:100%;
+    max-width: 20vw;
+    
+    margin:10px;
+}
+.centeredDiv{
+   display:flex;
+   justify-content: space-around;
+    
+    text-align: center;
+}
+#communityInfoPanelContainer{
+    display:flex;
+    flex-direction: row;
+    margin:0 auto;
+    text-align: center;
+}
+#communityInfoPanel{
+    margin:0 auto;
+}
+#socialMedia{
+    display: flex;
+    flex-direction: column;
+}
+#socialMedia button{
+    margin:10px;
+}
+.coinChart{
+    width:100%;
+}
+.footer{
+    height:100px !important;
+    margin-top: 5px;
+}
+#navigationContainer{
+    width:50%;
+    margin:10px auto;
+    padding:5px;
+    color: #dbdbdb ;
+    
+}
+
+
+@media only screen and (max-width: 1024px){
+    #chartCard{
+        width:95% !important;
+    }
+    button{
+        padding: 8px 8px;
+    }
+    .dropdown-menu{
+        height:150px;
+        overflow-x: scroll;
+    }
+    #tableContainer{
+        width:100vw  !important;
+        overflow-y: scroll;
+    }
+    .centeredDiv{
+        flex-direction: column;
+    }
+    #basicCoinInfo{
+        max-width: 100%;
+        margin:0 auto;
+        width: 100%;
+    }
+    #ChartCanvas{
+        height:10vh;
+    }
+    #dropDownSelector button{
+        margin:0px 5px;
+    }
+    #timeSelect{
+        margin:0px 
+        5px;
+    } 
+}
