@@ -193,8 +193,10 @@ function getTableInfo(){
                 document.getElementById('TableInsert').appendChild(tableRowtoAdd);
                 
             });
-
-        })
+            document.getElementById('loadBar').remove(); 
+        }
+        
+        )
 }
 
 
