@@ -1,7 +1,7 @@
 
 let query = window.location.search;
 query = query.slice(1)
-console.log(query);
+//console.log(query);
 
 
 
@@ -17,7 +17,7 @@ fetch(`https://api.coingecko.com/api/v3/coins/${query}?localization=false&ticker
                 alert("Не постои таков ID! Пробај повторно!");
                 window.close();
             }else{
-                console.log(responseData);
+                //console.log(responseData);
 
                 document.getElementById('coinName').innerText= `${responseData.name} (${responseData.symbol.toUpperCase()})`;
 
@@ -41,7 +41,7 @@ fetch(`https://api.coingecko.com/api/v3/coins/${query}?localization=false&ticker
                 }else{
                     document.getElementById('hashInfo').innerText = ``
                 }
-               console.log(responseData.links)
+               //console.log(responseData.links)
                let socialMedia = document.getElementById('socialMedia')
 
                if(responseData.links.blockchain_site[0]){
@@ -71,7 +71,7 @@ fetch(`https://api.coingecko.com/api/v3/coins/${query}?localization=false&ticker
 fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${query}&vs_currencies=usd&include_market_cap=true&include_24hr_change=true`)
         .then(response => response.json())
         .then(responseData =>{
-            console.log(responseData,'eve')
+            //console.log(responseData,'eve')
             responseData[query].usd = new Intl.NumberFormat('us-US',{style:'currency',currency: "USD"}).format(responseData[query].usd)
             responseData[query].usd_market_cap = new Intl.NumberFormat('us-US',{style:'currency',currency: "USD"}).format(responseData[query].usd_market_cap)
             responseData[query].usd_24h_change = new Intl.NumberFormat('us-US').format(responseData[query].usd_24h_change) 

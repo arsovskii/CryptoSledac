@@ -1,13 +1,13 @@
 let currentPage = 1;
 let query = window.location.search;
 query = query.slice(1)
-console.log(query);
+//console.log(query);
 if(!query){
     currentPage = 1;
 }else{
     currentPage = query;
 }
-console.log(currentPage);
+//console.log(currentPage);
 
 let numofPages = 1;
 
@@ -21,9 +21,9 @@ currentPage = Number(currentPage);
 fetch(`https://api.coingecko.com/api/v3/global`)
     .then(response => response.json())
         .then(responseData=>{
-            console.log(responseData.data.active_cryptocurrencies)
+            //console.log(responseData.data.active_cryptocurrencies)
             numofPages = Math.ceil(responseData.data.active_cryptocurrencies/100);
-            console.log(numofPages);
+            //console.log(numofPages);
             numofPages = Number(numofPages);
             if(currentPage > numofPages || currentPage <= 0 ){
                 alert("Грешка! Не постои таква страна!")
@@ -60,7 +60,7 @@ fetch(`https://api.coingecko.com/api/v3/global`)
             }
             pageArray.push(numofPages);
             let elipseArray = [];
-            console.log(pageArray);
+            //console.log(pageArray);
             let pageList = document.getElementById('pageList');
             for(let i = 0; i < pageArray.length-1;i++){
                 if(pageArray[i+1] - pageArray[i] != 1){
@@ -68,7 +68,7 @@ fetch(`https://api.coingecko.com/api/v3/global`)
                 }
             }
             let j = 0;
-            console.log(elipseArray);
+            //console.log(elipseArray);
             
             
             
@@ -82,7 +82,7 @@ fetch(`https://api.coingecko.com/api/v3/global`)
                     ellipsisList.appendChild(ellipsisElement)
                     pageList.appendChild(ellipsisList);
                 }
-                console.log(currentPage);
+                //console.log(currentPage);
                 let liElem = document.createElement('li');
                 let aElem = document.createElement('a');
 

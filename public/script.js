@@ -88,7 +88,7 @@ function getData(id){
     fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h`)
         .then(response => response.json())
         .then(responseData=>{
-           console.log(responseData,'lol');
+          
             let i = 0;
             responseData.forEach(element => {
                 //let pr = element.current_price.toString();
@@ -112,8 +112,8 @@ function getData(id){
                 toAdd.addEventListener('click', () =>{
                     if(active != toAdd.id){
                         active = toAdd.id;
-                        console.log(toAdd,'lol')
-                        console.log(responseData[toAdd.id].image);
+                       
+                        //console.log(responseData[toAdd.id].image);
                         document.getElementById('selectedCrypto').innerText = responseData[toAdd.id].name
                         document.getElementById('dropdownImageSelected').src = responseData[toAdd.id].image;
                         
@@ -181,7 +181,7 @@ function getData(id){
     fetch(`https://api.coingecko.com/api/v3/global`)
         .then(response => response.json())
         .then(responseData=>{
-            console.log(responseData.data.market_cap_change_percentage_24h_usd);
+            //console.log(responseData.data.market_cap_change_percentage_24h_usd);
             if(responseData.data.market_cap_change_percentage_24h_usd < 0){
                 document.getElementById('infoCard').classList.add('negativeMarket')
 
@@ -212,7 +212,7 @@ function getData(id){
                 
                 if(now !== date.getDate()){
                     moments = moment(moments).format('DD.MM.YYYY HH:MM');
-                    console.log(moments,'v');
+                    //console.log(moments,'v');
                     now = date.getDate()
                 }else{
                     if(daysToShow === 1){
@@ -231,15 +231,15 @@ function getData(id){
                 cryptoArrayPrice.push(element[1]);
                 
             });
-           console.log(responseData,active );
+           //console.log(responseData,active );
         
             myChart.data.labels = cryptoArrayTime;
             let name = id.replace(/^\w/, (c) => c.toUpperCase());
             myChart.data.datasets[0].label = name;
-            console.log(name);
+            //console.log(name);
             myChart.data.datasets[0].data = cryptoArrayPrice
             
-            console.log(currentPrices,'bitno');
+            //console.log(currentPrices,'bitno');
             document.getElementById('currentSelectedPrice').innerText = currentPrices[active] ;
             
             if(name === 'Bitcoin'){
@@ -267,7 +267,7 @@ function getData(id){
                     luminosity: 'light'
                 });
                 
-                console.log(randomColor1);
+                //console.log(randomColor1);
                 document.getElementById('chartCard').setAttribute(`style`, `background-color: rgba(${randomColor1[0]},${randomColor1[1]},${randomColor1[2]},1);`)
                 myChart.data.datasets[0].borderColor = `rgba(${randomColor1[0]},${randomColor1[1]},${randomColor1[2]},1`;
                 myChart.data.datasets[0].backgroundColor = `rgba(${randomColor1[0]},${randomColor1[1]},${randomColor1[2]},1`;
@@ -305,7 +305,7 @@ timeFrame.addEventListener('click',() =>{
 var timeButton = document.getElementById('timeFrameSelect');
 document.getElementById('1den').addEventListener('click',() =>{
     if(daysToShow != 1){
-        console.log(activeID);
+        //console.log(activeID);
         daysToShow = 1;
         timeButton.innerText = '1 Ден'
         getData(activeID[active])
@@ -314,7 +314,7 @@ document.getElementById('1den').addEventListener('click',() =>{
 })
 document.getElementById('7den').addEventListener('click',() =>{
     if(daysToShow != 7){
-        console.log(activeID);
+        //console.log(activeID);
         daysToShow = 7;
         timeButton.innerText = '7 Дена'
         getData(activeID[active])
